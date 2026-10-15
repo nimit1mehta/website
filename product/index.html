@@ -457,6 +457,18 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
  #homepage-main .pgx-card{grid-template-columns:1fr;min-height:0}
  #homepage-main .pgx-card .pg-prom-vis{border-left:0;border-top:1px solid var(--nv-line);min-height:320px}
 }
+
+/* promises head: full row, no subline */
+#homepage-main .pgx-head{max-width:none;margin-bottom:0}
+#homepage-main .pgx-head .nv-h2{max-width:none}
+#homepage-main .pgx-tabs .pgx-tab{line-height:1.3}
+/* industry context visual */
+#homepage-main .pgi-inds{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.1)}
+#homepage-main .pgi-ind{font-size:11.5px;font-weight:500;padding:5px 10px;border-radius:6px;background:#2C3A4B;border:1px solid rgba(255,255,255,.12);color:#acb9c7}
+#homepage-main .pgi-ind.on{background:#3A2A28;border-color:rgba(241,90,34,.8);color:#fff}
+#homepage-main .pgi-type{flex:none;width:76px;font-family:var(--_tq--typography---mono,'JetBrains Mono',monospace);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#b794ff}
+#homepage-main .pgi-type.ac{color:#ff8a5c}
+#homepage-main .pgi-ext{border-top:1px dashed rgba(241,90,34,.6)!important}
 </style>
 </head>
 <body>
@@ -529,36 +541,30 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
 <!-- ===== 3. four promises (tabbed module, same pattern as the existing site differentiators component) ===== -->
 <section id="nv-promises" class="nv nv-light nv-block">
   <div class="nv-container">
-    <div class="nv-head-full">
-      <h2 class="nv-h2">Define it once, govern it in one place, and make it stick</h2>
-      <p class="nv-lede">What TQ Data Foundation does for every team, system and agent that depends on your data.</p>
+    <div class="nv-head-full pgx-head">
+      <h2 class="nv-h2">From your industry's standards to answers you can prove</h2>
     </div>
     <div class="pgx">
       <div class="pgx-tabs" role="tablist" aria-label="What you get">
-        <button class="pgx-tab" role="tab" id="t-pr-start" aria-selected="true" aria-controls="pr-start" tabindex="0">Start from standards</button><button class="pgx-tab" role="tab" id="t-pr-say" aria-selected="false" aria-controls="pr-say" tabindex="-1">Say it once</button><button class="pgx-tab" role="tab" id="t-pr-prove" aria-selected="false" aria-controls="pr-prove" tabindex="-1">Prove any answer</button><button class="pgx-tab" role="tab" id="t-pr-run" aria-selected="false" aria-controls="pr-run" tabindex="-1">Run anywhere</button>
+        <button class="pgx-tab" role="tab" id="t-pr-start" aria-selected="true" aria-controls="pr-start" tabindex="0">Start with your industry's context</button><button class="pgx-tab" role="tab" id="t-pr-say" aria-selected="false" aria-controls="pr-say" tabindex="-1">Change once, update everywhere</button><button class="pgx-tab" role="tab" id="t-pr-prove" aria-selected="false" aria-controls="pr-prove" tabindex="-1">Replay any answer</button><button class="pgx-tab" role="tab" id="t-pr-run" aria-selected="false" aria-controls="pr-run" tabindex="-1">Deploy where you need it</button>
       </div>
       <div class="pgx-ruler" aria-hidden="true"><span class="pgx-mark"></span></div>
       <div class="pgx-card on" id="pr-start" role="tabpanel" aria-labelledby="t-pr-start">
-        <div class="pgx-copy"><h3>Start where your industry already agreed</h3><p>Begin from the standards your field runs on. AI drafts the rest from your own documents and data, and your experts approve every change before an agent acts on it.</p><a href="https://www.topquadrant.com/use-case/reference-data" class="btn btn-text review-text-link">Explore reference data <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
-        <div class="pg-prom-vis" role="img" aria-label="Illustration: expert review of an AI-drafted definition, with two required approvals and a conflict between finance and commercial">
-          <div style="width:100%;max-width:420px;display:flex;flex-direction:column;gap:10px">
-            <div class="pg-panel">
-              <div class="pg-bar"><span class="grow">Expert review · Active customer</span><span class="pg-tag ac"><span class="d"></span>1 of 2 approvals</span></div>
-              <div class="pg-row"><span class="pg-av">FS</span><span class="grow"><span class="t">Finance steward</span><span class="pg-skel" style="width:45%"></span></span><span class="pg-tag ok"><span class="d"></span>Approved</span></div>
-              <div class="pg-row"><span class="pg-av" style="background:#3A2A28;box-shadow:inset 0 0 0 1px rgba(241,90,34,.8)">CS</span><span class="grow"><span class="t">Commercial steward</span><span class="pg-skel" style="width:35%"></span></span><span class="pg-tag">Reviewing</span></div>
-            </div>
-            <div class="pg-panel" style="padding:12px 14px">
-              <div class="pg-lbl" style="margin-bottom:10px">Conflict to resolve · AI draft from industry standard</div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-                <div class="pg-field"><b>Finance</b><span class="pg-skel b" style="width:80%"></span><span class="pg-skel" style="width:55%"></span></div>
-                <div class="pg-field pick"><b>Commercial</b><span class="pg-skel b" style="width:70%"></span><span class="pg-skel" style="width:60%"></span></div>
-              </div>
-            </div>
+        <div class="pgx-copy"><h3>Your industry's context, loaded on day one</h3><p>Standards, ontologies, rulesets and reference data your field already agreed on come built in. AI extends them from your own documents and data, and your experts approve every change before an agent acts on it.</p><a href="https://www.topquadrant.com/use-case/reference-data" class="btn btn-text review-text-link">See how reference data works <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
+        <div class="pg-prom-vis" role="img" aria-label="Illustration: authoritative context loaded by industry, with standards, an ontology, a ruleset and reference data installed, and AI-drafted extensions awaiting expert approval">
+          <div class="pg-panel" style="width:100%;max-width:440px">
+            <div class="pg-bar"><span class="grow">Industry context</span><span class="pg-tag ok"><span class="d"></span>Loaded day one</span></div>
+            <div class="pgi-inds"><span class="pgi-ind on">Life sciences</span><span class="pgi-ind">Financial services</span><span class="pgi-ind">Government</span><span class="pgi-ind">Media</span></div>
+            <div class="pg-row"><span class="pgi-type">Standard</span><span class="grow"><span class="t">Medical terminologies</span><span class="pg-skel" style="width:55%"></span></span><span class="pg-tag ok"><span class="d"></span>Installed</span></div>
+            <div class="pg-row"><span class="pgi-type">Ontology</span><span class="grow"><span class="t">Product &amp; substance model</span><span class="pg-skel" style="width:45%"></span></span><span class="pg-tag ok"><span class="d"></span>Installed</span></div>
+            <div class="pg-row"><span class="pgi-type">Ruleset</span><span class="grow"><span class="t">Submission validation rules</span><span class="pg-skel" style="width:60%"></span></span><span class="pg-tag ok"><span class="d"></span>Installed</span></div>
+            <div class="pg-row"><span class="pgi-type">Reference</span><span class="grow"><span class="t">Country, unit &amp; dosage codes</span><span class="pg-skel" style="width:40%"></span></span><span class="pg-tag ok"><span class="d"></span>Installed</span></div>
+            <div class="pg-row pgi-ext"><span class="pgi-type ac">Yours</span><span class="grow"><span class="t">Extensions drafted by AI</span><span class="pg-skel" style="width:65%"></span></span><span class="pg-tag ac"><span class="d"></span>12 to approve</span></div>
           </div>
         </div>
       </div>
       <div class="pgx-card" id="pr-say" role="tabpanel" aria-labelledby="t-pr-say">
-        <div class="pgx-copy"><h3>Say it once, and every system hears it</h3><p>One governed definition reaches every platform, application and agent you run. Change it, and they all answer the new way that day, with the old answer still on record. When a source drifts, TQ flags it and routes it to your experts.</p><a href="https://www.topquadrant.com/use-case/semantic-layer" class="btn btn-text review-text-link">Explore the semantic layer <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
+        <div class="pgx-copy"><h3>Change a definition once. Every system answers the new way.</h3><p>One governed source feeds every agent, platform and application you run. Update it and they all move together that day, with the old answer still on record. When a source drifts, TQ flags it for your experts.</p><a href="https://www.topquadrant.com/use-case/semantic-layer" class="btn btn-text review-text-link">See the semantic layer <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
         <div class="pg-prom-vis" role="img" aria-label="Illustration: one governed definition bound to four systems, all on the same version">
           <div class="pg-bind">
             <div class="pg-auth"><span class="pg-lbl">Governed definition</span><div class="nm">Active customer</div><span class="pg-tag ok"><span class="d"></span>v4 · Approved</span></div>
@@ -572,7 +578,7 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
         </div>
       </div>
       <div class="pgx-card" id="pr-prove" role="tabpanel" aria-labelledby="t-pr-prove">
-        <div class="pgx-copy"><h3>Prove any answer, years later</h3><p>Every change and every agent call is recorded. When a regulator asks why an agent made a decision, replay it exactly as it ran and show who approved what.</p><a href="https://www.topquadrant.com/use-case/ai-agent-governance" class="btn btn-text review-text-link">Explore AI governance <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
+        <div class="pgx-copy"><h3>Replay any answer, exactly as it ran</h3><p>Every change and every agent call is recorded against the definitions in force at the time. When a regulator asks why, you can show them, down to who approved what.</p><a href="https://www.topquadrant.com/use-case/ai-agent-governance" class="btn btn-text review-text-link">See AI governance <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
         <div class="pg-prom-vis" role="img" aria-label="Illustration: a record of agent answers, each replayable against the definitions in force that day">
           <div class="pg-panel" style="width:100%;max-width:440px">
             <div class="pg-bar"><span class="grow">Answer record</span><span class="pg-tag ok"><span class="d"></span>Every call recorded</span></div>
@@ -583,7 +589,7 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
         </div>
       </div>
       <div class="pgx-card" id="pr-run" role="tabpanel" aria-labelledby="t-pr-run">
-        <div class="pgx-copy"><h3>Run it where your auditors need it</h3><p>In our cloud or yours, built for the most regulated environments.</p><a href="https://www.topquadrant.com/contact" class="btn btn-text review-text-link">Talk to us about deployment <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
+        <div class="pgx-copy"><h3>Run it inside your walls, or ours</h3><p>SaaS or self-hosted, with long-term support releases for validated environments. Your keys, your network, your context.</p><a href="https://www.topquadrant.com/contact" class="btn btn-text review-text-link">Talk to us about deployment <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
         <div class="pg-prom-vis" role="img" aria-label="Illustration: deployment in your own cloud, with a long-term support release for validated environments">
           <div class="pg-stack">
             <div class="pg-panel" style="display:block;padding:14px"><div class="pg-lbl" style="color:#acb9c7;margin-bottom:10px">Deployment</div><div class="pg-seg"><span>TQ cloud</span><span class="on">Your cloud</span></div></div>
