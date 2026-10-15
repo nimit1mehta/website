@@ -461,7 +461,7 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
 /* promises head: full row, no subline */
 #homepage-main .pgx-head{max-width:none;margin-bottom:0}
 #homepage-main .pgx-head .nv-h2{max-width:none;font-size:clamp(1.8rem,3vw,2.4rem);text-wrap:pretty}
-#homepage-main .pgx-tabs .pgx-tab{line-height:1.3}
+#homepage-main .pgx-tabs .pgx-tab{line-height:1.3;font-size:clamp(.92rem,1.2vw,1.05rem)}
 /* industry context visual */
 #homepage-main .pgi-inds{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.1)}
 #homepage-main .pgi-ind{font-size:11.5px;font-weight:500;padding:5px 10px;border-radius:6px;background:#2C3A4B;border:1px solid rgba(255,255,255,.12);color:#acb9c7}
@@ -546,7 +546,7 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
     </div>
     <div class="pgx">
       <div class="pgx-tabs" role="tablist" aria-label="What you get">
-        <button class="pgx-tab" role="tab" id="t-pr-start" aria-selected="true" aria-controls="pr-start" tabindex="0">Start with your industry's context</button><button class="pgx-tab" role="tab" id="t-pr-say" aria-selected="false" aria-controls="pr-say" tabindex="-1">Change once, update everywhere</button><button class="pgx-tab" role="tab" id="t-pr-prove" aria-selected="false" aria-controls="pr-prove" tabindex="-1">Replay any answer</button><button class="pgx-tab" role="tab" id="t-pr-run" aria-selected="false" aria-controls="pr-run" tabindex="-1">Deploy where you need it</button>
+        <button class="pgx-tab" role="tab" id="t-pr-start" aria-selected="true" aria-controls="pr-start" tabindex="0">Start with industry context</button><button class="pgx-tab" role="tab" id="t-pr-own" aria-selected="false" aria-controls="pr-own" tabindex="-1">Own your ground truth</button><button class="pgx-tab" role="tab" id="t-pr-say" aria-selected="false" aria-controls="pr-say" tabindex="-1">Update everywhere</button><button class="pgx-tab" role="tab" id="t-pr-run" aria-selected="false" aria-controls="pr-run" tabindex="-1">Deploy where you build</button>
       </div>
       <div class="pgx-ruler" aria-hidden="true"><span class="pgx-mark"></span></div>
       <div class="pgx-card on" id="pr-start" role="tabpanel" aria-labelledby="t-pr-start">
@@ -563,6 +563,26 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
           </div>
         </div>
       </div>
+      <div class="pgx-card" id="pr-own" role="tabpanel" aria-labelledby="t-pr-own">
+        <div class="pgx-copy"><h3>Your experts decide what's true. Every agent follows it.</h3><p>TQ holds the definitions, rules and relationships your experts have approved, each with an owner and a version. Agents and applications resolve against that authoritative context, so the answer they give is the one your business stands behind.</p><a href="https://www.topquadrant.com/authoritative-context" class="btn btn-text review-text-link">See authoritative context <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
+        <div class="pg-prom-vis" role="img" aria-label="Illustration: experts approving a definition, with two required approvals and a conflict between finance and commercial resolved before it becomes authoritative">
+          <div style="width:100%;max-width:420px;display:flex;flex-direction:column;gap:10px">
+            <div class="pg-panel">
+              <div class="pg-bar"><span class="grow">Ground truth · Active customer</span><span class="pg-tag ac"><span class="d"></span>1 of 2 approvals</span></div>
+              <div class="pg-row"><span class="pg-av">FS</span><span class="grow"><span class="t">Finance steward</span><span class="pg-skel" style="width:45%"></span></span><span class="pg-tag ok"><span class="d"></span>Approved</span></div>
+              <div class="pg-row"><span class="pg-av" style="background:#3A2A28;box-shadow:inset 0 0 0 1px rgba(241,90,34,.8)">CS</span><span class="grow"><span class="t">Commercial steward</span><span class="pg-skel" style="width:35%"></span></span><span class="pg-tag">Reviewing</span></div>
+            </div>
+            <div class="pg-panel" style="padding:12px 14px">
+              <div class="pg-lbl" style="margin-bottom:10px">Conflict to resolve before it's authoritative</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                <div class="pg-field"><b>Finance</b><span class="pg-skel b" style="width:80%"></span><span class="pg-skel" style="width:55%"></span></div>
+                <div class="pg-field pick"><b>Commercial</b><span class="pg-skel b" style="width:70%"></span><span class="pg-skel" style="width:60%"></span></div>
+              </div>
+            </div>
+            <div class="pg-panel" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;font-size:12.5px;color:#acb9c7">Owner · Finance data office <span class="pg-ver">v4</span></div>
+          </div>
+        </div>
+      </div>
       <div class="pgx-card" id="pr-say" role="tabpanel" aria-labelledby="t-pr-say">
         <div class="pgx-copy"><h3>Change a definition once. Every system answers the new way.</h3><p>One governed source feeds every agent, platform and application you run. Update it and they all move together that day, with the old answer still on record. When a source drifts, TQ flags it for your experts.</p><a href="https://www.topquadrant.com/use-case/semantic-layer" class="btn btn-text review-text-link">See the semantic layer <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
         <div class="pg-prom-vis" role="img" aria-label="Illustration: one governed definition bound to four systems, all on the same version">
@@ -574,17 +594,6 @@ h3{font-size:1.3rem;letter-spacing:-.02em}
               <div class="pg-panel">BI model<span class="pg-skel"></span><span class="pg-tag ok"><span class="d"></span>v4</span></div>
               <div class="pg-panel">Catalog<span class="pg-skel"></span><span class="pg-tag ok"><span class="d"></span>v4</span></div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="pgx-card" id="pr-prove" role="tabpanel" aria-labelledby="t-pr-prove">
-        <div class="pgx-copy"><h3>Replay any answer, exactly as it ran</h3><p>Every change and every agent call is recorded against the definitions in force at the time. When a regulator asks why, you can show them, down to who approved what.</p><a href="https://www.topquadrant.com/use-case/ai-agent-governance" class="btn btn-text review-text-link">See AI governance <svg class="review-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"/></svg></a></div>
-        <div class="pg-prom-vis" role="img" aria-label="Illustration: a record of agent answers, each replayable against the definitions in force that day">
-          <div class="pg-panel" style="width:100%;max-width:440px">
-            <div class="pg-bar"><span class="grow">Answer record</span><span class="pg-tag ok"><span class="d"></span>Every call recorded</span></div>
-            <div class="pg-row"><span class="pg-tag ok">Served</span><span class="grow"><span class="pg-skel b" style="width:80%"></span><span class="s">resolved against Active customer v3 · 14 Mar</span></span><span class="pg-replay">Replay</span></div>
-            <div class="pg-row"><span class="pg-tag">Refused</span><span class="grow"><span class="pg-skel b" style="width:60%"></span><span class="s">caller not entitled</span></span><span class="pg-replay">Replay</span></div>
-            <div class="pg-row"><span class="pg-tag ok">Served</span><span class="grow"><span class="pg-skel b" style="width:70%"></span><span class="s">approved by 2 experts</span></span><span class="pg-replay">Replay</span></div>
           </div>
         </div>
       </div>
